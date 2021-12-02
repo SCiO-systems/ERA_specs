@@ -1,0 +1,1827 @@
+{
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "object",
+          "properties": {
+            "$ref": {
+              "type": "keyword"
+            }
+          }
+        },
+        "extra": {
+          "type": "object",
+          "properties": {
+            "publication_code": {
+              "type": "keyword"
+            },
+            "project": {
+              "type": "date"
+            }
+          }
+        }
+      }
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "study_sites": {
+          "type": "nested",
+          "properties": {
+            "location": {
+              "type": "nested"
+            },
+            "environment": {
+              "type": "object",
+              "properties": {
+                "seasonality": {
+                  "type": "nested"
+                },
+                "climate": {
+                  "type": "nested"
+                },
+                "physical": {
+                  "type": "nested"
+                }
+              }
+            },
+            "notes": {
+              "type": "keyword"
+            },
+            "soil_variables": {
+              "type": "nested",
+              "properties": {
+                "depth": {
+                  "type": "object",
+                  "properties": {
+                    "upper": {
+                      "type": "long"
+                    },
+                    "lower": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "sand": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "silt": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "clay": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "bulk_density": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "total_carbon": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "soil_organic_carbon_content": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "soil_organic_matter_content": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "soil_ph": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "cation_exchange_capacity": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "electrical_conductivity": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "water_holding_capacity": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "total_nitrogen": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "ammonium": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "nitrate": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "available_nitrogen": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "experimental_design": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "keyword"
+            },
+            "experimental_plot_size": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "long"
+                },
+                "unit": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "harvested_plot_size": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "long"
+                },
+                "unit": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "notes": {
+              "type": "keyword"
+            }
+          }
+        },
+        "products": {
+          "type": "nested",
+          "properties": {
+            "product": {
+              "type": "keyword"
+            },
+            "subtype": {
+              "type": "keyword"
+            },
+            "nfixing": {
+              "type": "keyword"
+            },
+            "woody": {
+              "type": "keyword"
+            },
+            "aggreated": {
+              "type": "boolean"
+            },
+            "varieties": {
+              "type": "nested",
+              "properties": {
+                "variety": {
+                  "type": "keyword"
+                },
+                "species": {
+                  "type": "keyword"
+                },
+                "subspecies": {
+                  "type": "keyword"
+                },
+                "crop_practice": {
+                  "type": "keyword"
+                },
+                "animal_practice": {
+                  "type": "keyword"
+                },
+                "base_practice": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "traits": {
+                      "type": "nested",
+                      "properties": {
+                        "order": {
+                          "type": "long"
+                        },
+                        "value": {
+                          "type": "keyword"
+                        }
+                      }
+                    },
+                    "time_to_maturity": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "long"
+                        },
+                        "unit": {
+                          "type": "keyword"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "combine_varieties": {
+              "type": "nested",
+              "properties": {
+                "practice_name": {
+                  "type": "keyword"
+                },
+                "varieties": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "planting_information": {
+              "type": "object",
+              "properties": {
+                "practice_name": {
+                  "type": "keyword"
+                },
+                "outcome": {
+                  "type": "boolean"
+                },
+                "notes": {
+                  "type": "keyword"
+                },
+                "method": {
+                  "type": "keyword"
+                },
+                "density": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "row_width_spacing": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "spacing_within_rows": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "seeds": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "after_thining": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "tramlines": {
+                  "type": "object",
+                  "properties": {
+                    "paired_width_spacing": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "long"
+                        },
+                        "unit": {
+                          "type": "keyword"
+                        }
+                      }
+                    },
+                    "rows": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "long"
+                        },
+                        "unit": {
+                          "type": "keyword"
+                        }
+                      }
+                    }
+                  }
+                },
+                "intercropping": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "keyword"
+                    },
+                    "rows_in_block": {
+                      "type": "object",
+                      "properties": {
+                        "number": {
+                          "type": "object",
+                          "properties": {
+                            "value": {
+                              "type": "long"
+                            },
+                            "unit": {
+                              "type": "keyword"
+                            }
+                          }
+                        },
+                        "plot": {
+                          "type": "object",
+                          "properties": {
+                            "value": {
+                              "type": "long"
+                            },
+                            "unit": {
+                              "type": "keyword"
+                            }
+                          }
+                        },
+                        "width": {
+                          "type": "object",
+                          "properties": {
+                            "value": {
+                              "type": "long"
+                            },
+                            "unit": {
+                              "type": "keyword"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "agroforestry": {
+          "type": "nested",
+          "properties": {
+            "boundary_planting": {
+              "type": "keyword"
+            },
+            "silvopasture": {
+              "type": "keyword"
+            },
+            "other": {
+              "type": "boolean"
+            },
+            "name": {
+              "type": "keyword"
+            },
+            "species_records": {
+              "type": "nested",
+              "properties": {
+                "tree_shrub": {
+                  "type": "keyword"
+                },
+                "subspecies": {
+                  "type": "keyword"
+                },
+                "variety": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "notes": {
+              "type": "keyword"
+            }
+          }
+        },
+        "tillage": {
+          "type": "nested",
+          "properties": {
+            "practice": {
+              "type": "keyword"
+            },
+            "name": {
+              "type": "keyword"
+            },
+            "base": {
+              "type": "boolean"
+            },
+            "details_record": {
+              "type": "nested",
+              "properties": {
+                "method": {
+                  "type": "keyword"
+                },
+                "other_method": {
+                  "type": "keyword"
+                },
+                "depth": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "frequency": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "field_tilled": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "tilled_width": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "untilled_width": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fertilizer": {
+          "type": "nested",
+          "properties": {
+            "name": {
+              "type": "keyword"
+            },
+            "base": {
+              "type": "boolean"
+            },
+            "organic_npk": {
+              "type": "object",
+              "properties": {
+                "elemental_N": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "elemental_P": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "elemental_K": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                }
+              }
+            },
+            "inorganic_npk": {
+              "type": "object",
+              "properties": {
+                "elemental_N": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "elemental_P": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "elemental_K": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                }
+              }
+            },
+            "application_details": {
+              "type": "nested",
+              "properties": {
+                "class": {
+                  "type": "keyword"
+                },
+                "name": {
+                  "type": "keyword"
+                },
+                "n_p_k_rating": {
+                  "type": "object",
+                  "properties": {
+                    "n": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "keyword"
+                        },
+                        "unit": {
+                          "type": "keyword"
+                        }
+                      }
+                    },
+                    "p": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "keyword"
+                        },
+                        "unit": {
+                          "type": "keyword"
+                        }
+                      }
+                    },
+                    "k": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "keyword"
+                        },
+                        "unit": {
+                          "type": "keyword"
+                        }
+                      }
+                    }
+                  }
+                },
+                "amount_applied": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "application_method": {
+                  "type": "keyword"
+                },
+                "source_of_material": {
+                  "type": "keyword"
+                },
+                "fate_of_material": {
+                  "type": "keyword"
+                },
+                "application_date": {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "keyword"
+                    },
+                    "crop_stage": {
+                      "type": "keyword"
+                    },
+                    "days_related_to_planting": {
+                      "type": "object",
+                      "properties": {
+                        "direction": {
+                          "type": "keyword"
+                        },
+                        "value": {
+                          "type": "long"
+                        }
+                      }
+                    },
+                    "days_related_to_emergence": {
+                      "type": "object",
+                      "properties": {
+                        "direction": {
+                          "type": "keyword"
+                        },
+                        "value": {
+                          "type": "long"
+                        }
+                      }
+                    },
+                    "description": {
+                      "type": "keyword"
+                    }
+                  }
+                }
+              }
+            },
+            "combine_practices": {
+              "type": "nested",
+              "properties": {
+                "practice_name": {
+                  "type": "keyword"
+                },
+                "sub_prectice": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "composition_details_record": {
+              "type": "nested",
+              "properties": {
+                "nutrient": {
+                  "type": "keyword"
+                },
+                "dry_weight": {
+                  "type": "keyword"
+                },
+                "dry_matter": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "organic_carbon": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "nitrogen": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "total_nitrogen": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "available_nitrogen": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "carbon_nitrogen_ratio": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "phosphorous": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "available_phosphorous": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "potasium": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "ph": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                }
+              }
+            },
+            "notes": {
+              "type": "keyword"
+            }
+          }
+        },
+        "chemicals": {
+          "type": "nested",
+          "properties": {
+            "name": {
+              "type": "keyword"
+            },
+            "base": {
+              "type": "boolean"
+            },
+            "outcome_reporting": {
+              "type": "boolean"
+            },
+            "chemical_details_record": {
+              "type": "nested",
+              "properties": {
+                "type_of_chemical": {
+                  "type": "keyword"
+                },
+                "name_of_chemical": {
+                  "type": "keyword"
+                },
+                "active_ingredient_ammount": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "application_rate": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "number_of_applications": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "application_date": {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "keyword"
+                    },
+                    "crop_stage": {
+                      "type": "keyword"
+                    },
+                    "days_related_to_planting": {
+                      "type": "object",
+                      "properties": {
+                        "direction": {
+                          "type": "keyword"
+                        },
+                        "value": {
+                          "type": "long"
+                        }
+                      }
+                    },
+                    "days_related_to_emergence": {
+                      "type": "object",
+                      "properties": {
+                        "direction": {
+                          "type": "keyword"
+                        },
+                        "value": {
+                          "type": "long"
+                        }
+                      }
+                    },
+                    "description": {
+                      "type": "keyword"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "residues": {
+          "type": "nested",
+          "properties": {
+            "name": {
+              "type": "keyword"
+            },
+            "base": {
+              "type": "boolean"
+            },
+            "components": {
+              "type": "nested",
+              "properties": {
+                "order": {
+                  "type": "long"
+                },
+                "value": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "mulched": {
+              "type": "boolean"
+            },
+            "notes": {
+              "type": "keyword"
+            },
+            "organic_npk": {
+              "type": "object",
+              "properties": {
+                "elemental_N": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "elemental_P": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "elemental_K": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                }
+              }
+            },
+            "application_details_record": {
+              "type": "nested",
+              "properties": {
+                "tree": {
+                  "type": "keyword"
+                },
+                "material": {
+                  "type": "keyword"
+                },
+                "source": {
+                  "type": "keyword"
+                },
+                "amount": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "fate_of_material": {
+                  "type": "keyword"
+                },
+                "coverage": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "application_date": {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "keyword"
+                    },
+                    "crop_stage": {
+                      "type": "keyword"
+                    },
+                    "days_related_to_planting": {
+                      "type": "object",
+                      "properties": {
+                        "direction": {
+                          "type": "keyword"
+                        },
+                        "value": {
+                          "type": "long"
+                        }
+                      }
+                    },
+                    "days_related_to_emergence": {
+                      "type": "object",
+                      "properties": {
+                        "direction": {
+                          "type": "keyword"
+                        },
+                        "value": {
+                          "type": "long"
+                        }
+                      }
+                    },
+                    "description": {
+                      "type": "keyword"
+                    }
+                  }
+                }
+              }
+            },
+            "composition_details_record": {
+              "type": "nested",
+              "properties": {
+                "tree": {
+                  "type": "keyword"
+                },
+                "other": {
+                  "type": "keyword"
+                },
+                "dry_weight": {
+                  "type": "keyword"
+                },
+                "dry_matter": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "organic_carbon": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "nitrogen": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "total_nitrogen": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "available_nitrogen": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "carbon_nitrogen_ratio": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "phosphorous": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "available_phosphorous": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "potasium": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "ph": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "keyword"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "weed": {
+          "type": "nested",
+          "properties": {
+            "name": {
+              "type": "keyword"
+            },
+            "base": {
+              "type": "boolean"
+            },
+            "outcome_reporting": {
+              "type": "boolean"
+            },
+            "weeding_method": {
+              "type": "keyword"
+            },
+            "frequency": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "long"
+                },
+                "unit": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "notes": {
+              "type": "keyword"
+            }
+          }
+        },
+        "harvest": {
+          "type": "nested",
+          "properties": {
+            "practice": {
+              "type": "keyword"
+            },
+            "name": {
+              "type": "keyword"
+            },
+            "notes": {
+              "type": "keyword"
+            }
+          }
+        },
+        "ph": {
+          "type": "nested",
+          "properties": {
+            "practice": {
+              "type": "keyword"
+            },
+            "name": {
+              "type": "keyword"
+            },
+            "base": {
+              "type": "boolean"
+            },
+            "notes": {
+              "type": "keyword"
+            },
+            "material_record": {
+              "type": "nested",
+              "properties": {
+                "material": {
+                  "type": "keyword"
+                },
+                "ecce": {
+                  "type": "keyword"
+                },
+                "cce": {
+                  "type": "keyword"
+                },
+                "caco": {
+                  "type": "keyword"
+                },
+                "mgco": {
+                  "type": "keyword"
+                },
+                "amount": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "water": {
+          "type": "nested",
+          "properties": {
+            "practice": {
+              "type": "keyword"
+            },
+            "name": {
+              "type": "keyword"
+            },
+            "notes": {
+              "type": "keyword"
+            },
+            "base": {
+              "type": "boolean"
+            }
+          }
+        },
+        "irrigation": {
+          "type": "nested",
+          "properties": {
+            "method": {
+              "type": "keyword"
+            },
+            "strategy": {
+              "type": "keyword"
+            },
+            "notes": {
+              "type": "keyword"
+            },
+            "base": {
+              "type": "boolean"
+            },
+            "irrigation_details_record": {
+              "type": "nested",
+              "properties": {
+                "amount_water": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "type_of_water": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        },
+        "animals": {
+          "type": "nested",
+          "properties": {
+            "feed_addition": {
+              "type": "object",
+              "properties": {
+                "values": {
+                  "type": "nested",
+                  "properties": {
+                    "order": {
+                      "type": "long"
+                    },
+                    "value": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "control": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "feed_substitution": {
+              "type": "object",
+              "properties": {
+                "values": {
+                  "type": "nested",
+                  "properties": {
+                    "order": {
+                      "type": "long"
+                    },
+                    "value": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "control": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "feed_processing": {
+              "type": "object",
+              "properties": {
+                "values": {
+                  "type": "nested",
+                  "properties": {
+                    "order": {
+                      "type": "long"
+                    },
+                    "value": {
+                      "type": "keyword"
+                    }
+                  }
+                }
+              }
+            },
+            "manure": {
+              "type": "keyword"
+            },
+            "pasture": {
+              "type": "keyword"
+            },
+            "aquasilviculture": {
+              "type": "boolean"
+            },
+            "grazing": {
+              "type": "boolean"
+            },
+            "grass_hay": {
+              "type": "boolean"
+            },
+            "name": {
+              "type": "keyword"
+            },
+            "base": {
+              "type": "boolean"
+            },
+            "notes": {
+              "type": "keyword"
+            },
+            "diet_records": {
+              "type": "nested",
+              "properties": {
+                "diet": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "keyword"
+                    },
+                    "item": {
+                      "type": "keyword"
+                    },
+                    "amount": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "long"
+                        },
+                        "unit": {
+                          "type": "keyword"
+                        }
+                      }
+                    },
+                    "time": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "long"
+                        },
+                        "unit": {
+                          "type": "keyword"
+                        }
+                      }
+                    },
+                    "animals": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "long"
+                        },
+                        "unit": {
+                          "type": "keyword"
+                        }
+                      }
+                    }
+                  }
+                },
+                "source": {
+                  "type": "keyword"
+                },
+                "processing": {
+                  "type": "keyword"
+                },
+                "ad_libitum": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "other": {
+          "type": "nested",
+          "properties": {
+            "name": {
+              "type": "keyword"
+            },
+            "base": {
+              "type": "boolean"
+            },
+            "outcome_reporting": {
+              "type": "boolean"
+            },
+            "notes": {
+              "type": "keyword"
+            }
+          }
+        },
+        "ph_energy": {
+          "type": "object",
+          "properties": {
+            "post_harvest": {
+              "type": "nested",
+              "properties": {
+                "name": {
+                  "type": "keyword"
+                },
+                "base": {
+                  "type": "boolean"
+                },
+                "practices": {
+                  "type": "nested",
+                  "properties": {
+                    "name": {
+                      "type": "keyword"
+                    },
+                    "order": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "seed_source": {
+                  "type": "keyword"
+                },
+                "notes": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "biogas": {
+              "type": "nested",
+              "properties": {
+                "name": {
+                  "type": "keyword"
+                },
+                "base": {
+                  "type": "boolean"
+                },
+                "practices": {
+                  "type": "nested",
+                  "properties": {
+                    "name": {
+                      "type": "keyword"
+                    },
+                    "order": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "notes": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        },
+        "treatment": {
+          "type": "object",
+          "properties": {
+            "created_treatments": {
+              "type": "nested",
+              "properties": {
+                "product": {
+                  "type": "keyword"
+                },
+                "fate_of_crop": {
+                  "type": "keyword"
+                },
+                "agroforestry": {
+                  "type": "keyword"
+                },
+                "chemicals": {
+                  "type": "keyword"
+                },
+                "energy": {
+                  "type": "keyword"
+                },
+                "harvest": {
+                  "type": "keyword"
+                },
+                "irrigation": {
+                  "type": "keyword"
+                },
+                "residues": {
+                  "type": "keyword"
+                },
+                "fertilizers": {
+                  "type": "keyword"
+                },
+                "ph_energy": {
+                  "type": "keyword"
+                },
+                "planting": {
+                  "type": "keyword"
+                },
+                "postharvest": {
+                  "type": "keyword"
+                },
+                "tillage": {
+                  "type": "keyword"
+                },
+                "variety": {
+                  "type": "keyword"
+                },
+                "water": {
+                  "type": "keyword"
+                },
+                "other": {
+                  "type": "keyword"
+                },
+                "weed": {
+                  "type": "keyword"
+                },
+                "control": {
+                  "type": "boolean"
+                },
+                "replicates": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "animals": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "period": {
+                  "type": "object",
+                  "properties": {
+                    "start_year": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "seasong": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "long"
+                    },
+                    "unit": {
+                      "type": "keyword"
+                    }
+                  }
+                }
+              }
+            },
+            "treatment_aggregation": {
+              "type": "keyword"
+            }
+          }
+        },
+        "intercrop": {
+          "type": "nested",
+          "properties": {
+            "agroforestry_practice": {
+              "type": "keyword"
+            },
+            "non_agroforestry_practice": {
+              "type": "keyword"
+            },
+            "treatments": {
+              "type": "nested"
+            },
+            "fate_of_crop": {
+              "type": "keyword"
+            },
+            "period": {
+              "type": "object",
+              "properties": {
+                "start_year": {
+                  "type": "long"
+                }
+              }
+            },
+            "season": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "long"
+                },
+                "unit": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "control": {
+              "type": "boolean"
+            },
+            "replicates": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "long"
+                },
+                "unit": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "notes": {
+              "type": "keyword"
+            }
+          }
+        }
+      }
+    }
+  }
+}
